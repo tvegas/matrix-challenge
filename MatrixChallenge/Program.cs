@@ -16,7 +16,7 @@ namespace MatrixChallenge
                 var result = string.Empty;
                 var defaultPath = "./matrix-default.txt";
 
-                Console.WriteLine($"Por favor, ingrese una opcion para comenzar (solo numeros):");
+                Console.WriteLine($"Por favor, ingrese una opcion para comenzar (solo numeros) y luego presione enter:");
                 Console.WriteLine($"1 - Especificar path del archivo.");
                 Console.WriteLine($"2 - Utilizar archivo por defecto (matrix-default.txt).");
 
