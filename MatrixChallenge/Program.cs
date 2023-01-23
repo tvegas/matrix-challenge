@@ -58,9 +58,9 @@ namespace MatrixChallenge
                 Console.WriteLine($"Presione una tecla para finalizar.");
                 Console.ReadLine();
             }
-            catch(Exception)
+            catch(Exception ex)
             {
-                Console.WriteLine($"Error inesperado, por favor presione una tecla para finalizar.");
+                Console.WriteLine($"Error inesperado {ex.Message}, por favor presione una tecla para finalizar.");
                 Console.ReadLine();
             }
         }
