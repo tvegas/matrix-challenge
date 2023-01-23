@@ -9,6 +9,11 @@ namespace MatrixChallenge.Helpers
 {
     public static class MatrixStringFinderHelper
     {
+        /// <summary>
+        /// Search for the longest repeated character secuency in a given matrix
+        /// </summary>
+        /// <param name="path">Path of the file that contains the matrix</param>
+        /// <returns>The longest repeated character secuency</returns>
         public static string SearchLongestRepeatedCharacterSecuency(string path)
         {
             var result = string.Empty;
@@ -29,7 +34,7 @@ namespace MatrixChallenge.Helpers
         /// </summary>
         /// <param name="matrix">The matrix</param>
         /// <returns>The longest repeted character string</returns>
-        public static string SearchLongestSecuencyInVerticallAndHorizontal(string[][] matrix)
+        private static string SearchLongestSecuencyInVerticallAndHorizontal(string[][] matrix)
         {
             var result = string.Empty;
             for (var i = 0; i < matrix.Length; i++)
@@ -52,7 +57,7 @@ namespace MatrixChallenge.Helpers
         /// </summary>
         /// <param name="matrix">The matrix</param>
         /// <returns>The longest repeted character string</returns>
-        public static string SearchLongestSecuencyInDiagonals(string[][] matrix)
+        private static string SearchLongestSecuencyInDiagonals(string[][] matrix)
         {
             int rows = matrix.Length;
             int columns = matrix.Length;
@@ -110,7 +115,7 @@ namespace MatrixChallenge.Helpers
         /// <param name="text">Text to be compared</param>
         /// <param name="currentResult">Current result</param>
         /// <returns>The new result</returns>
-        public static string EvaluateResult(string text, string currentResult)
+        private static string EvaluateResult(string text, string currentResult)
         {
             var currentLength = currentResult.Length;
 

@@ -43,10 +43,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="matrix-default.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Compile Include="Helpers\MatrixReaderHelper.cs" />
     <Compile Include="Helpers\MatrixStringFinderHelper.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Validators\FileValidator.cs" />
     <Compile Include="Validators\MatrixValidator.cs" />
   </ItemGroup>
   <ItemGroup>
