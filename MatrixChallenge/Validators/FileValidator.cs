@@ -16,7 +16,7 @@ namespace MatrixChallenge.Validators
         public static void ValidateFile(string path)
         {
 
-            var isTxt = path.ToLower().Contains(".txt") && path.Split('.').Last().ToLower() == "txt";
+            var isTxt = Path.GetExtension(path) == ".txt";
 
             if (!isTxt)
                 throw new ApplicationException("El archivo debe ser de extensison .txt");

@@ -21,8 +21,8 @@ namespace MatrixChallenge.Helpers
 
             MatrixValidator.ValidateSquareMatrix(matrix);
 
-            var verticalAndHorizontalResult = SearchLongestSecuencyInVerticallAndHorizontal(matrix);
-            var diagonalsResult = SearchLongestSecuencyInDiagonals(matrix);
+            var verticalAndHorizontalResult = GetLongestSecuencyInVerticallAndHorizontal(matrix);
+            var diagonalsResult = GetLongestSecuencyInDiagonals(matrix);
 
             result = EvaluateResult(diagonalsResult,verticalAndHorizontalResult);
 
@@ -30,11 +30,11 @@ namespace MatrixChallenge.Helpers
 
         }
         /// <summary>
-        /// Search the longest repeated secuency vertically and horizontally
+        /// Get the longest repeated secuency vertically and horizontally
         /// </summary>
         /// <param name="matrix">The matrix</param>
         /// <returns>The longest repeted character string</returns>
-        private static string SearchLongestSecuencyInVerticallAndHorizontal(string[][] matrix)
+        private static string GetLongestSecuencyInVerticallAndHorizontal(string[][] matrix)
         {
             var result = string.Empty;
             for (var i = 0; i < matrix.Length; i++)
@@ -53,25 +53,25 @@ namespace MatrixChallenge.Helpers
             return result;
         }
         /// <summary>
-        /// Search the longest repeated secuency on all the diagonals in a given matrix
+        /// Get the longest repeated secuency on all the diagonals in a given matrix
         /// </summary>
         /// <param name="matrix">The matrix</param>
         /// <returns>The longest repeted character string</returns>
-        private static string SearchLongestSecuencyInDiagonals(string[][] matrix)
+        private static string GetLongestSecuencyInDiagonals(string[][] matrix)
         {
-            int rows = matrix.Length;
-            int columns = matrix.Length;
+            var rows = matrix.Length;
+            var columns = matrix.Length;
 
             var result = string.Empty;
 
-            // number of secondary diagonals
+            // number of diagonals
             int diagonalsQty = rows + columns - 1;
             int row, column, reverseColum;
 
             // go through each diagonal
             for (int i = 0; i < diagonalsQty; i++)
             {
-                // row to start
+                // row and columns to start
                 if (i < columns)
                 {
                     row = 0;
@@ -85,7 +85,7 @@ namespace MatrixChallenge.Helpers
                     reverseColum = 0;
                 }
 
-                // concatenated strings
+                // concatenated strings for each diagonal
                 var diagonalString = string.Empty;
                 var reverseDiagonalString = string.Empty;
 
